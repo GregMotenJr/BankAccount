@@ -10,19 +10,28 @@ namespace project3BankAccountFinal
     {
 
         ///fields
-
+        private decimal checkingBalence;
 
 
         ///Properties
-
+        public decimal CheckingBalence
+        {
+            get { return this.checkingBalence; }
+        }
 
 
         ///Constructors 1
+        public Checking()
+        {
 
+        }
 
 
         ///Methods
-        
+        public override void ViewAccountBalance()
+        {
+
+        }
 
 
 

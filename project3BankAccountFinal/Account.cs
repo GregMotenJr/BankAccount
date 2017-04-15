@@ -10,30 +10,46 @@ namespace project3BankAccountFinal
     {
 
         ///fields
-        //An account number
-        //Checking account balance
-        //Savings account balance
-        //Account type (savings or checking)
+        protected int accountNumber;
+        protected decimal checkingAccountBalance;
+        protected decimal savingsAccountBalance;
+        protected string accountType;
 
 
 
 
 
         ///Properties
+        public int AccountNumber
+        {
+            get { return this.accountNumber; }
+        }
 
+        public string AccountType
+        {
+            get { return this.accountType; }
+        }
+
+        public decimal CheckingAccountBalance
+        {
+            get { return this.checkingAccountBalance; }
+        }
+
+        public decimal SavingsAccountBalance
+        {
+            get { return this.savingsAccountBalance; }
+        }
 
 
         ///Constructors
-
-
-
-        ///Methods
-
-        //View Client Information
-        public void ViewClientInformation()
+        public Account()
         {
 
         }
+
+
+        ///Methods
+        
 
         //View Account Balance
         public abstract void ViewAccountBalance();

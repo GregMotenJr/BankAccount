@@ -11,6 +11,9 @@ namespace project3BankAccountFinal
         static void Main(string[] args)
         {
             ///Greeting
+            // Welcome 007 to the remote drop terminal
+            // Logging in
+            // Access granted
 
             ///Menu System
 
