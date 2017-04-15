@@ -13,10 +13,14 @@ namespace project3BankAccountFinal
             ///Bank Account Project by Greg Moten Jr
 
             ///Greeting
+            Console.WriteLine("Establishing secure connection");
             Console.WriteLine("Validating credentials");
             Console.WriteLine("Access granted");
             Console.WriteLine("Secure connection established");
-            Console.WriteLine("Welcome 007 to the remote dead drop terminal");
+            Console.WriteLine("Welcome 007");
+            Console.WriteLine("Access to your funds is online");
+            Console.WriteLine("All other functions remain offline at this time including weapon requests");
+            Console.WriteLine("Godspeed James -- Q\n\n\n");
 
             //instantiate accounts
             Client bond = new Client();
@@ -25,20 +29,6 @@ namespace project3BankAccountFinal
 
             ///Menu System
 
-            /* - [x ] View Client Information
-            - [x ] View Account Balance
-            - [ x] Checking Account Balance
-            - [ x] Savings Account Balance
-            - [ x] Deposit Funds
-                - [ x] To Checking Account
-                - [ x] To Savings Account
-            - [ x] Withdraw Funds
-                - [ x] From Checking Account
-                - [ x] From Savings Account
-            - [ x] Exit
-            */
-            
-            
             int selectedOption;
             do
             {
@@ -59,8 +49,8 @@ namespace project3BankAccountFinal
                         break;
 
                     case 2://view balance
-                        Console.WriteLine("Checking account balance is: {0:c3}", checking1.CheckingBalence);
-                        Console.WriteLine("Savings account balance is: {0:C5}", savings1.SavingsBalance);
+                        Console.WriteLine("Checking account balance is: {0:c}", checking1.CheckingBalence);
+                        Console.WriteLine("Savings account balance is: {0:c}", savings1.SavingsBalance);
                         break;
 
                     case 3://deposit funds
@@ -104,27 +94,15 @@ namespace project3BankAccountFinal
 
                         else
                         { //having trouble with min balance logic, commented out orginal solution and trying to work the method
-                            savings1.WithdrawFunds(withdraw);
-                            //if (withdraw<=savings1.MinBalance)
-                            //{
-                            //    Console.WriteLine("Terriably sorry sir, but that transaction would cause your account to fall below minimum balance of {0:c} from your savings, Sorry about that Sir", savings1.MinBalance);
-                            //    Console.WriteLine("Current balance: {0:c} ", savings1.SavingsBalance);
-                            //}
 
-                            //else
-                            //{
-                            //    Console.WriteLine("{0:c} from savings, understood Sir", withdraw);
-                            //    savings1.SavingsBalance -= withdraw;
-                            //    Console.WriteLine("New balance: {0:c} ", savings1.SavingsBalance);
-                            //}
+                            savings1.WithdrawFunds(withdraw);
 
                         }
-
 
                         break;
 
                     case 5://Exit
-                        Console.WriteLine("Roger that, good luck out there 007");
+                        Console.WriteLine("Affirmative sir, good luck out there 007");
                         break;
 
                     default://Wrong key press

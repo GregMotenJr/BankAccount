@@ -16,7 +16,7 @@ namespace project3BankAccountFinal
         protected string accountType;
         protected decimal deposit;
         protected decimal withdraw;
-        
+
 
 
         ///Properties
@@ -49,11 +49,11 @@ namespace project3BankAccountFinal
 
 
         ///Methods
-        
+
 
         //View Account Balance
         public abstract void ViewAccountBalance();
-        
+
 
         //Deposit Funds
         public virtual void DepositFunds(decimal deposit)

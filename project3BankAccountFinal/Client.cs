@@ -42,7 +42,7 @@ namespace project3BankAccountFinal
         ///Constructors 1
         public Client()
         {
-            
+
         }
 
 

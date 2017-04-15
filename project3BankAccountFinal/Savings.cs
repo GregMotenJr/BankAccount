@@ -10,7 +10,7 @@ namespace project3BankAccountFinal
     {
 
         ///fields
-        private decimal minBalance = 100000000.00m;
+        private decimal minBalance = 5000000.00m;
         private decimal savingsBalance = 100000000.00m;
 
 
@@ -47,18 +47,18 @@ namespace project3BankAccountFinal
             savingsBalance += deposit;
         }
 
-        public override void WithdrawFunds(decimal withdraw)
+        public override void WithdrawFunds(decimal withdraw) // tweeked several times and tried diffrent ways, still not 100%
         {
             if (savingsBalance >= withdraw)
             {
-                if (savingsBalance >= minBalance)
+                if ((savingsBalance - withdraw) > minBalance)
                 {
                     savingsBalance -= withdraw;
                 }
 
                 else
                 {
-                    Console.WriteLine("Terriably sorry sir, but that transaction would cause your account to fall below minimum balance of {0:c} from your savings, Sorry about that Sir", minBalance);
+                    Console.WriteLine("Terriably sorry sir, but that transaction would cause your account to fall below the minimum balance of {0:c} for your savings, Sorry about that Sir", minBalance);
                 }
             }
 

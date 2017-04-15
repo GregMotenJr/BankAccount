@@ -10,7 +10,7 @@ namespace project3BankAccountFinal
     {
 
         ///fields
-        private decimal checkingBalence=100000.00m;
+        private decimal checkingBalence = 100000.00m;
 
 
         ///Properties
@@ -44,7 +44,7 @@ namespace project3BankAccountFinal
 
             else
             {
-                Console.WriteLine("You can't withdraw money that you don't have!");
+                Console.WriteLine("Sorry 007 but you dont have enough money in your account");
             }
         }
 
