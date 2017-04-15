@@ -14,9 +14,9 @@ namespace project3BankAccountFinal
         protected decimal checkingAccountBalance;
         protected decimal savingsAccountBalance;
         protected string accountType;
-
-
-
+        protected decimal deposit;
+        protected decimal withdraw;
+        
 
 
         ///Properties
@@ -56,14 +56,14 @@ namespace project3BankAccountFinal
         
 
         //Deposit Funds
-        public virtual void DepositFunds()
+        public virtual void DepositFunds(decimal deposit)
         {
-
+            Console.WriteLine("Transaction recorded, somone will be by to collect the dead drop 007");
         }
         //Withdraw Funds
-        public virtual void WithdrawFunds()
+        public virtual void WithdrawFunds(decimal withdraw)
         {
-
+            Console.WriteLine("Transaction recorded, I hope this isnt about that woman in the red dress from last night 007");
         }
 
 

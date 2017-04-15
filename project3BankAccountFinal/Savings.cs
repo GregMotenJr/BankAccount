@@ -10,20 +10,21 @@ namespace project3BankAccountFinal
     {
 
         ///fields
-        private decimal minBalence =5.00m;
-        private decimal savingsBalence;
+        private decimal minBalance = 100000000.00m;
+        private decimal savingsBalance = 100000000.00m;
 
 
 
         ///Properties 1
-        public decimal minBalence
+        public decimal MinBalance
         {
-            get { return this.minBalence; }
+            get { return this.minBalance; }
         }
 
-        public decimal SavingsBalence
+        public decimal SavingsBalance
         {
-            get { return this.savingsBalence; }
+            get { return this.savingsBalance; }
+            set { savingsBalance = value; }
         }
 
 
@@ -37,11 +38,35 @@ namespace project3BankAccountFinal
         ///Methods
         public override void ViewAccountBalance()
         {
-            ////Thread.CurrentThread.CurrentCulture = new CultureInfo;
-            ////Console.WriteLine(minBalence.ToString("{0:c}",5.00));
+            Console.WriteLine("Current savings balence is: {0:c}", savingsAccountBalance);
+
         }
 
+        public override void DepositFunds(decimal deposit)
+        {
+            savingsBalance += deposit;
+        }
 
+        public override void WithdrawFunds(decimal withdraw)
+        {
+            if (savingsBalance >= withdraw)
+            {
+                if (savingsBalance >= minBalance)
+                {
+                    savingsBalance -= withdraw;
+                }
+
+                else
+                {
+                    Console.WriteLine("Terriably sorry sir, but that transaction would cause your account to fall below minimum balance of {0:c} from your savings, Sorry about that Sir", minBalance);
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("Sorry 007 but you dont have enough money in your account");
+            }
+        }
 
     }
 }

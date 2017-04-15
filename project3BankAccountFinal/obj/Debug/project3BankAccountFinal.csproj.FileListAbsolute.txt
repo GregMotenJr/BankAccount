@@ -1,1 +1,6 @@
 c:\users\jiggy\onedrive\documents\visual studio 2015\Projects\project3BankAccountFinal\project3BankAccountFinal\bin\Debug\project3BankAccountFinal.exe.config
+C:\Users\jiggy\OneDrive\Documents\Visual Studio 2015\Projects\project3BankAccountFinal\project3BankAccountFinal\bin\Debug\project3BankAccountFinal.exe
+C:\Users\jiggy\OneDrive\Documents\Visual Studio 2015\Projects\project3BankAccountFinal\project3BankAccountFinal\bin\Debug\project3BankAccountFinal.pdb
+C:\Users\jiggy\OneDrive\Documents\Visual Studio 2015\Projects\project3BankAccountFinal\project3BankAccountFinal\obj\Debug\project3BankAccountFinal.csprojResolveAssemblyReference.cache
+C:\Users\jiggy\OneDrive\Documents\Visual Studio 2015\Projects\project3BankAccountFinal\project3BankAccountFinal\obj\Debug\project3BankAccountFinal.exe
+C:\Users\jiggy\OneDrive\Documents\Visual Studio 2015\Projects\project3BankAccountFinal\project3BankAccountFinal\obj\Debug\project3BankAccountFinal.pdb

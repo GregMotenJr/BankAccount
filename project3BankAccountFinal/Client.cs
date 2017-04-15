@@ -12,7 +12,7 @@ namespace project3BankAccountFinal
         ///fields 3
         // add all client info
         private string clientName = "James Bond";
-        private string clientPhoneNumber = "007-007-0007";
+        private string clientPhoneNumber = "007-007-1007";
         private string clientEmail = "007@MI6.uk";
         private string clientAgentIdNumber = "007";
 
@@ -34,6 +34,11 @@ namespace project3BankAccountFinal
             get { return this.clientAgentIdNumber; }
         }
 
+        public string ClientEmail
+        {
+            get { return this.clientEmail; }
+        }
+
         ///Constructors 1
         public Client()
         {
@@ -43,15 +48,17 @@ namespace project3BankAccountFinal
 
 
         ///Methods 1
+        //this method will never be called but cannont be commented out
         public override void ViewAccountBalance()
         {
-            
+            //***Nothing to see here.... move along citizen***
         }
 
         public void ViewClientInformation()
         {
-            Console.WriteLine(clientName);
+            Console.WriteLine("Personal Information:");
             Console.WriteLine(clientAgentIdNumber);
+            Console.WriteLine(clientName);
             Console.WriteLine(clientEmail);
             Console.WriteLine(ClientPhoneNumber);
         }
