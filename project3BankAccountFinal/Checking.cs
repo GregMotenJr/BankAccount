@@ -11,7 +11,7 @@ namespace project3BankAccountFinal
 
         ///fields
         private decimal checkingBalence = 100000.00m;
-
+        private int accountNumberChecking = 0000007;
 
         ///Properties
         public decimal CheckingBalence
@@ -21,7 +21,7 @@ namespace project3BankAccountFinal
         }
 
 
-        ///Constructors 1
+        ///Constructors 
         public Checking()
         {
 

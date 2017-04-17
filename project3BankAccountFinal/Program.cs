@@ -13,15 +13,29 @@ namespace project3BankAccountFinal
             ///Bank Account Project by Greg Moten Jr
 
             ///Greeting
-            Console.WriteLine("Establishing secure connection");
-            Console.WriteLine("Validating credentials");
-            Console.WriteLine("Access granted");
-            Console.WriteLine("Secure connection established");
-            Console.WriteLine("Welcome 007");
-            Console.WriteLine("Access to your funds is online");
-            Console.WriteLine("All other functions remain offline at this time including weapon requests");
-            Console.WriteLine("Godspeed James -- Q\n\n\n");
+            Console.WriteLine("Establishing connection");
+            System.Threading.Thread.Sleep(1000);
+            Console.WriteLine("\nValidating credentials");
+            System.Threading.Thread.Sleep(2000);
 
+            Console.WriteLine("  ___   ___ ______ ");
+            Console.WriteLine(" / _ \\ / _ \\____  |");
+            Console.WriteLine("| | | | | | |  / / ");
+            Console.WriteLine("| | | | | | | / /  ");
+            Console.WriteLine("| |_| | |_| |/ /   ");
+            Console.WriteLine(" \\___/ \\___//_/    \n\n");
+            System.Threading.Thread.Sleep(3000);
+            Console.WriteLine("\n\nAccess granted");
+            System.Threading.Thread.Sleep(2000);
+            Console.WriteLine("\nSecure connection established");
+            System.Threading.Thread.Sleep(1500);
+
+            Program.TypeLine("\n\nWelcome to the remote requsitions system 007");
+            Program.TypeLine("access to funds is online");
+            Program.TypeLine("all other functions remain offline at this time including weapon requests until contact with the target is established");
+            Program.TypeLine("please try not to break this device 007");
+            Program.TypeLine("Godspeed James -- Q\n\n\n");
+            System.Threading.Thread.Sleep(2000);
             //instantiate accounts
             Client bond = new Client();
             Savings savings1 = new Savings();
@@ -33,7 +47,7 @@ namespace project3BankAccountFinal
             do
             {
                 Console.WriteLine();
-                Console.WriteLine("1. View Client Information");
+                Console.WriteLine("1. View Agent Information");
                 Console.WriteLine("2. View Account Balance");
                 Console.WriteLine("3. Deposit Funds");
                 Console.WriteLine("4. Withdraw Funds");
@@ -93,10 +107,9 @@ namespace project3BankAccountFinal
                         }
 
                         else
-                        { //having trouble with min balance logic, commented out orginal solution and trying to work the method
+                        { //having trouble with min balance and making it work correctly, see method in savings
 
                             savings1.WithdrawFunds(withdraw);
-
                         }
 
                         break;
@@ -111,8 +124,20 @@ namespace project3BankAccountFinal
                 }
 
             } while (selectedOption != 5);
+            Console.ReadKey();
 
 
+        }
+        
+        // using this to make text appear like its being typed out in real time in certain places
+        static void TypeLine(string line)
+        {
+            for (int i = 0; i < line.Length; i++)
+            {
+                Console.Write(line[i]);
+                System.Threading.Thread.Sleep(100); // Sleep for 150 milliseconds
+            }
+            Console.WriteLine();
         }
     }
 }

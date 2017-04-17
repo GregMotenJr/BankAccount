@@ -12,10 +12,12 @@ namespace project3BankAccountFinal
         ///fields
         private decimal minBalance = 5000000.00m;
         private decimal savingsBalance = 100000000.00m;
+        private int accountNumberSavings = 100007;
 
 
 
-        ///Properties 1
+        ///Properties 
+
         public decimal MinBalance
         {
             get { return this.minBalance; }
@@ -28,7 +30,7 @@ namespace project3BankAccountFinal
         }
 
 
-        ///Constructors 1
+        ///Constructors 
         public Savings()
         {
 
@@ -47,7 +49,13 @@ namespace project3BankAccountFinal
             savingsBalance += deposit;
         }
 
-        public override void WithdrawFunds(decimal withdraw) // tweeked several times and tried diffrent ways, still not 100%
+        /* Re-written several times and tried diffrent ways, still not 100% and I cant figure out why not
+         cant find help online, im sure its something very simple I dont see right now because in my head this makes sense
+         logicly unless nesting an IF doesnt work the way I think it does which is like(IF <this> is true AND IF <this 
+         other thing> is true, then RESULT... that is why I have things written in its current state. Want to get project in 
+         on time so I'm going to submit*/
+
+        public override void WithdrawFunds(decimal withdraw)
         {
             if (savingsBalance >= withdraw)
             {

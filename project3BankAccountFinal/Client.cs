@@ -9,16 +9,18 @@ namespace project3BankAccountFinal
     class Client : Account
     {
 
-        ///fields 3
+        ///fields 
         // add all client info
         private string clientName = "James Bond";
         private string clientPhoneNumber = "007-007-1007";
         private string clientEmail = "007@MI6.uk";
         private string clientAgentIdNumber = "007";
+        private string checkingAccNum = "Account Number - Checking = 0000007";
+        private string savingsAccNum = "Account Number - Savings = 100007";
 
 
 
-        ///Properties 3
+        ///Properties 
         public string ClientName
         {
             get { return this.clientName; }
@@ -39,7 +41,7 @@ namespace project3BankAccountFinal
             get { return this.clientEmail; }
         }
 
-        ///Constructors 1
+        ///Constructors 
         public Client()
         {
 
@@ -47,7 +49,7 @@ namespace project3BankAccountFinal
 
 
 
-        ///Methods 1
+        ///Methods 
         //this method will never be called but cannont be commented out
         public override void ViewAccountBalance()
         {
@@ -61,6 +63,8 @@ namespace project3BankAccountFinal
             Console.WriteLine(clientName);
             Console.WriteLine(clientEmail);
             Console.WriteLine(ClientPhoneNumber);
+            Console.WriteLine(checkingAccNum);
+            Console.WriteLine(savingsAccNum);
         }
 
     }
